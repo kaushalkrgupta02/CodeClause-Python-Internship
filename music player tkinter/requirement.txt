@@ -1,2 +1,2 @@
-import tkinter
-import pygame
+Tkinter
+pygame
