@@ -9,7 +9,7 @@ mixer.init()
 
 root = Tk()
 root.title("Music Player")
-root.geometry("500x350")
+root.geometry("560x400")
 
 pygame.mixer.init()
 
@@ -35,9 +35,7 @@ def load_music():
 
 
 # Load the music disc icon image
-music_disc_icon = Image.open(
-    "C:\\#Projects\\CodeClause.py\\music player tkinter\\assest\\music_disc_icon.png"
-)
+music_disc_icon = Image.open("assest/music_disc_icon.png")
 
 # Create a list of rotated images
 rotated_images = []
@@ -140,16 +138,16 @@ org_menu.add_command(label="Select Folder", command=load_music)
 menubar.add_cascade(label="Organise", menu=org_menu)
 
 play_icon = PhotoImage(
-    file="C:\\#Projects\\CodeClause.py\\music player tkinter\\assest\\play_icon.png"
+    file="assest/play_icon.png"
 )
 pause_icon = PhotoImage(
-    file="C:\\#Projects\\CodeClause.py\\music player tkinter\\assest\\pause_icon.png"
+    file="assest/pause_icon.png"
 )
 stop_icon = PhotoImage(
-    file="C:\\#Projects\\CodeClause.py\\music player tkinter\\assest\\stop_icon.png"
+    file="assest/stop_icon.png"
 )
 resume_icon = PhotoImage(
-    file="C:\\#Projects\\CodeClause.py\\music player tkinter\\assest\\resume_icon.png"
+    file="assest/resume_icon.png"
 )
 
 
@@ -158,13 +156,13 @@ songlist.grid(column=0, row=0, padx=10)
 
 
 music_disc_icon = PhotoImage(
-    file="C:\\#Projects\\CodeClause.py\\music player tkinter\\assest\\music_disc_icon.png"
+    file="assest/music_disc_icon.png"
 )
 music_disc_label = Label(root, image=music_disc_icon)
 music_disc_label.grid(column=1, row=0, padx=30)
 
 my_label_img = PhotoImage(
-    file="C:\\#Projects\\CodeClause.py\\music player tkinter\\assest\\text-ezgif.com-resize.gif"
+    file="assest/text-ezgif.com-resize.gif"
 )
 my_label = Label(root, image=my_label_img)
 my_label.grid(column=1, row=1, padx=12)
