@@ -7,18 +7,18 @@ def extract_news_headlines(url):
     soup = BeautifulSoup(response.content, "html.parser")
 
     headlines = []
-    NEWS = soup.find_all("div", class_="news_Itm")
+    NEWS = soup.find_all("li", class_="NwsLstPg-a-li")
     # print(NEWS)
     for i in NEWS:
         if NEWS:
-            news_items = i.find("h2", class_="newsHdng")
+            news_items = i.find("h2", class_="NwsLstPg_ttl")
             # print(news_items)
             if news_items:
                 a_tag = news_items.find("a")
                 if a_tag:
                     link = a_tag.get("href")
                     txt = a_tag.text.strip()
-                    headlines.append((txt, link))
+                    headlines.append((txt, link))   
     return headlines
 
 
